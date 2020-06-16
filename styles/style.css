@@ -46,10 +46,14 @@ body {
 }
 h1 {
   font-size: 3rem;
-  grid-area: left;
+  color: hsl(230, 17%, 14%);
 }
 .banner-text {
   grid-area: left;
+}
+.total-followers {
+  font-weight: bold;
+  color: hsl(228, 12%, 44%);
 }
 .banner-switch {
   width: 140px;
@@ -71,10 +75,11 @@ h1 {
   justify-content: flex-end;
 }
 .switch-front {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background-color: white;
   border-radius: 100%;
+  margin: 3px;
 }
 /* MAIN */
 main {
@@ -145,6 +150,7 @@ main {
 /* SMALL CARDS */
 h2 {
   font-size: 2rem;
+  color: hsl(228, 12%, 44%);
 }
 .small.cards-container {
   display: grid;
@@ -179,11 +185,52 @@ h2 {
   justify-content: flex-end;
   align-items: center;
 }
-
-
 .attribution { 
   font-size: 11px; text-align: center;
 }
 .attribution a { 
   color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    background-color: ;
+  }
+  .stripe {
+    position: absolute;
+    width: 375px;
+    border-radius: 0px 0px 10px 10px;
+  }
+  .banner {
+    width: 335px;
+    display: flex;
+    flex-direction: column;
+  }
+  .banner-text {
+    padding-bottom: 20px;
+    border-bottom: 2px solid hsl(228, 12%, 54%);
+  }
+  h1 {
+    font-size: 1.9rem;
+  }
+  .banner-switch {
+    width: 100%;
+    padding-top: 20px;
+  }
+  main {
+    width: 335px;
+  }
+  .big.cards-container, .small.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .card {
+    width: 335px;
+  }
+  h2 {
+    margin: 40px 0px 20px 0px;
+    font-size: 1.7rem;
+  }
 }
