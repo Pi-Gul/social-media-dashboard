@@ -5,14 +5,19 @@
 }
 
 html {
+  --main-background: hsl(0, 0%, 100%);
+  --stripe-background: hsl(225, 100%, 98%);
+  --card-background: hsl(227, 47%, 96%);
+  --text-one: hsl(228, 12%, 44%);
+  --text-two: hsl(230, 17%, 14%);
   font-size: 14px;
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(230, 17%, 14%);
+  background-color: var(--main-background);
   font-family: 'Inter', sans-serif;
 }
 .card {
   width: 250px;
-  background-color: hsl(227, 47%, 96%);
+  background-color: var(--card-background);
+  color: var(--text-one);
 }
 .green {
   color: hsl(163, 72%, 41%);
@@ -31,7 +36,7 @@ body {
   width: 100%;
   height: 250px;
   margin: 0px auto;
-  background-color: hsl(225, 100%, 98%);
+  background-color: var(--stripe-background);
 }
 /* HEADER */
 .banner {
@@ -43,17 +48,17 @@ body {
   display: grid;
   grid-template: 1fr / 3fr 1fr;
   grid-template-areas: 'left right';
+  color: var(--text-one);
 }
 h1 {
   font-size: 3rem;
-  color: hsl(230, 17%, 14%);
+  color: var(--text-two);
 }
 .banner-text {
   grid-area: left;
 }
 .total-followers {
   font-weight: bold;
-  color: hsl(228, 12%, 44%);
 }
 .banner-switch {
   width: 140px;
@@ -62,7 +67,7 @@ h1 {
   justify-content: space-between;
   justify-self: end;
   align-items: center;
-  color: hsl(228, 12%, 44%);
+  color: var(--text-light);
   font-weight: bold;
 }
 .switch-back {
@@ -126,18 +131,19 @@ main {
 }
 .big.name-social {
   display: inline-block;
+  margin-left: 5px;
 }
 .big.number {
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 5px;
+  color: var(--text-two);
 }
 .big.followers {
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   font-size: 1.1rem;
-  color: hsl(228, 12%, 44%);
 }
 .big.today-count {
   display: flex;
@@ -150,7 +156,7 @@ main {
 /* SMALL CARDS */
 h2 {
   font-size: 2rem;
-  color: hsl(228, 12%, 44%);
+  color: var(--text-two);
 }
 .small.cards-container {
   display: grid;
@@ -167,7 +173,8 @@ h2 {
   border-radius: 5px;
 }
 .small.likes {
-  grid-area: top-left
+  grid-area: top-left;
+  font-weight: bold;
 }
 .small.icon-social {
   grid-area: top-right;
@@ -177,6 +184,8 @@ h2 {
   grid-area: bottom-left;
   align-self: end;
   font-size: 2.5rem;
+  color: var(--text-two);
+  font-weight: bold;
 }
 .small.count {
   grid-area: bottom-right;
@@ -187,9 +196,10 @@ h2 {
 }
 .attribution { 
   font-size: 11px; text-align: center;
+  color: var(--text-one); 
 }
 .attribution a { 
-  color: hsl(228, 45%, 44%); 
+  color: var(--text-two); 
 }
 
 @media only screen and (max-width: 600px) {
