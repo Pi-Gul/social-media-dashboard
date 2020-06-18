@@ -8,6 +8,7 @@ html {
   --main-background: hsl(0, 0%, 100%);
   --stripe-background: hsl(225, 100%, 98%);
   --card-background: hsl(227, 47%, 96%);
+  --card-background-highlight: hsl(227, 47%, 91%);
   --text-one: hsl(228, 12%, 44%);
   --text-two: hsl(230, 17%, 14%);
   font-size: 14px;
@@ -24,6 +25,9 @@ html {
 }
 .red {
   color: hsl(356, 69%, 56%);
+}
+.highlight {
+  background-color: var(--card-background-highlight);
 }
 /* BODY */
 body {
